@@ -1,0 +1,467 @@
+@import 'nullstyle.scss';
+@import url(https://fonts.googleapis.com/css?family=Alef:regular,700);
+@import url(https://fonts.googleapis.com/css?family=Arsenal:regular,italic,700,700italic);
+
+
+
+// sample
+%textsample {
+    font-family: 'Arsenal';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.1em;
+}
+// sample end
+
+// mixin start
+
+@mixin texts($f, $l, $mb) {
+    font-size: $f;
+    line-height: $l;
+    margin-bottom: $mb;
+}
+
+// mixin end
+
+// components
+a {
+    text-decoration: none;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+[class*='__container'] {
+    max-width: 1550px;
+    padding: 0 15px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.btn {
+    font-family: 'Alef';
+    letter-spacing: 0.05em;
+    font-weight: 400;
+    width: 354px;
+    height: 81px;
+    @include texts(36px, 49px, 0);
+ }
+
+
+// components end
+
+// header start
+
+.section__header {
+    padding-top: 60px;
+ }
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+.header__logo {
+    font-family: 'Arsenal';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #926147;
+ }
+.header__menu {
+    display: flex;
+    gap: 0 100px;
+ }
+.menu-header { }
+.menu-header__nav { }
+.menu-header__ul {
+    display: flex;
+    gap: 0 80px;
+ }
+.menu-header__li { }
+.menu-header__link {
+    font-family: 'Arsenal';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #000;
+ }
+.menu-header__icons {
+    display: flex;
+    gap: 0 20px;
+    img {
+        width: 20px;
+        height: 20px;
+    }
+ }
+.menu-header__basket { }
+.menu-header__find { }
+
+// header end
+
+// start start
+
+.section__start {
+    padding: 63px 0 0 0;
+ }
+.start__container {
+    display: flex;
+    justify-content: space-between;
+ }
+.start__image { }
+.start__img { }
+.start__body {
+    max-width: 698px;
+ }
+.body-start {
+    padding-top: 30px;
+ }
+.body-start__title {
+    @extend %textsample;
+    @include texts(87px, 118px, 7px);
+    letter-spacing: 0.12em;
+    &:nth-child(2) {
+        @include texts(60px, 60px, 44px);
+        letter-spacing: 0.05em;
+        color: #926147;
+        text-decoration: underline 1px;
+    }
+    &:nth-child(3) {
+        margin-bottom: 120px;
+        line-height: 60px;
+    }
+ }
+.body-start__text {
+    @extend %textsample;
+    margin-bottom: 120px;
+    
+ }
+
+
+// start end
+
+// certificates start
+
+.section__certificates {
+    padding-top: 100px;
+ }
+.certificates__container { }
+.certificates__title {
+    font-family: 'Arsenal';
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+ }
+.certificates__body {
+    padding: 34px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 3px solid #926147;
+    border-bottom: 3px solid #926147;
+    border-radius: 5px;
+ }
+.body-certificates { }
+.body-certificates__content {
+    max-width: 1020px;
+ }
+.body-certificates__title {
+    font-family: 'Arsenal';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 55px;
+    letter-spacing: 0.1em;
+    margin-top: 26px;
+    margin-bottom: 60px;
+    
+    span {
+        color: #926147;
+        text-decoration: underline 1px;
+    }
+ }
+.body-certificates__text {
+    @extend %textsample;
+    margin-bottom: 60px;
+ }
+.btn { }
+.body-certificates__btn {
+    margin-bottom: 30px;
+}
+.body-certificates__image { }
+.body-certificates__img { }
+
+// certificates end
+
+// bestsellers start
+
+.section__bestsellers { }
+.bestsellers__container {
+    
+ }
+.bestsellers__title {
+    font-family: 'Arsenal';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+ }
+.bestsellers__items {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+ }
+.items-bestsellers { }
+.items-bestsellers__slider {
+    position: absolute;
+    top: 0;
+    right: 0;
+ }
+.items-bestsellers__slide { }
+.items-bestsellers__item { }
+.item-bestsellers__image {
+    
+ }
+.item-bestsellers__img {
+    margin-bottom: 20px;
+ }
+.item-bestsellers__title {
+    font-family: 'Alef';
+    @extend %textsample;
+    @include texts(36px, 49px, 7px);
+    color: #000;
+
+ }
+.item-bestsellers__price {
+    font-family: 'Alef';
+    @extend %textsample;
+    @include texts(36px, 49px, 0);
+    border-bottom: #000 solid 4px;
+    border-radius: 5px;
+    max-width: 362px;
+ }
+
+// bestsellers end
+
+// catalog start
+
+.section__catalog {
+    padding-top: 100px;
+ }
+.catalog__container {
+    padding-top: 60px;
+ }
+.catalog__title {
+    font-family: 'Arsenal';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+ }
+.catalog__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px 25px;
+ }
+.items-catalog { }
+.items-catalog__item { }
+.items-catalog__link { }
+.items-catalog__title {
+    @extend %textsample;
+ }
+
+// catalog end
+
+// reviews start
+
+.section__reviews {
+    padding-top: 84px;
+ }
+.reviews__container {
+    position: relative;
+ }
+.reviews__title {
+    font-family: 'Arsenal';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+ }
+.btn { }
+.reviews__items {
+    margin-top: 60px;
+    display: flex;
+    gap: 0 30px;
+    position: relative;
+    left: 0;
+    transition: 0.5s;
+    // pointer-events: none;
+    // overflow: hidden;
+ }
+.item-reviews { }
+.items-reviews__slider {
+    position: absolute;
+    top: 200px;
+    right: 0;
+}
+.items-reviews__slide {}
+.item-reviews__item {
+    position: relative;
+    border-top: 3px solid #926147;
+    border-bottom: 3px solid #926147;
+    border-radius: 150px 150px 150px 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 590px;
+    padding: 30px 30px 27px;
+    flex-shrink: 0;
+    left: 0;
+    transition: 0.5s;
+ }
+.item-reviews__title {
+    @extend %textsample;
+    margin-bottom: 58px;
+
+    
+ }
+.item-reviews__text {
+    @extend %textsample;
+    @include texts(24px, 35px, 58px);
+
+ }
+.item-reviews__stars {
+    display: flex;
+    gap: 0 60px;
+ }
+.item-reviews__img { }
+
+// reviews end
+
+// blog start
+
+.section__blog {
+    padding-top: 83px;
+ }
+.blog__container { }
+.blog__title {
+    font-family: 'Arsenal';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+ }
+.blog__items {
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-between;
+ }
+.item-blog { }
+.item-blog__item { }
+.item-blog__img { }
+.item-blog__title {
+    @extend %textsample;
+    margin-bottom: 10px;
+ }
+.item-blog__link {
+    font-family: 'Alef';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 49px;
+    letter-spacing: 0.05em;
+    color: #926147;
+ }
+
+// blog end
+
+// footer 
+
+.section__footer {
+    background: #926147;
+    padding: 20px 0;
+    margin-top: 100px;
+ }
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+ }
+.footer__start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+.start-footer { }
+.start-footer__title {
+    font-family: 'Arsenal';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: #FFFAF4;
+ }
+.start-footer__socials {
+    display: flex;
+    gap: 0 30px;
+ }
+.start-footer__socilal {
+ }
+.footer-start__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0;
+    padding-top: 60px;
+ }
+ .footer-start__subtitle {
+    font-family: 'Arsenal';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 160%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+    color: #FFFAF4;
+ }
+.footer-start__link {
+    display: flex;
+    gap: 0 22px;
+    font-family: 'Arsenal';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFAF4;
+    img {
+        width: 15px;
+        height: auto;
+    }
+ }
+.footer__end { }
+.end-footer { }
+.end-footer__map { }

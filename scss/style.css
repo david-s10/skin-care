@@ -1,0 +1,490 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+@import url(https://fonts.googleapis.com/css?family=Alef:regular,700);
+@import url(https://fonts.googleapis.com/css?family=Arsenal:regular,italic,700,700italic);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.item-blog__title, .item-reviews__text, .item-reviews__title, .items-catalog__title, .item-bestsellers__price, .item-bestsellers__title, .body-certificates__text, .body-start__text, .body-start__title {
+  font-family: "Arsenal";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0.1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+[class*=__container] {
+  max-width: 1550px;
+  padding: 0 15px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.btn {
+  font-family: "Alef";
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  width: 354px;
+  height: 81px;
+  font-size: 36px;
+  line-height: 49px;
+  margin-bottom: 0;
+}
+
+.section__header {
+  padding-top: 60px;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  font-family: "Arsenal";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #926147;
+}
+
+.header__menu {
+  display: flex;
+  gap: 0 100px;
+}
+
+.menu-header__ul {
+  display: flex;
+  gap: 0 80px;
+}
+
+.menu-header__link {
+  font-family: "Arsenal";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: #000;
+}
+
+.menu-header__icons {
+  display: flex;
+  gap: 0 20px;
+}
+.menu-header__icons img {
+  width: 20px;
+  height: 20px;
+}
+
+.section__start {
+  padding: 63px 0 0 0;
+}
+
+.start__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.start__body {
+  max-width: 698px;
+}
+
+.body-start {
+  padding-top: 30px;
+}
+
+.body-start__title {
+  font-size: 87px;
+  line-height: 118px;
+  margin-bottom: 7px;
+  letter-spacing: 0.12em;
+}
+.body-start__title:nth-child(2) {
+  font-size: 60px;
+  line-height: 60px;
+  margin-bottom: 44px;
+  letter-spacing: 0.05em;
+  color: #926147;
+  -webkit-text-decoration: underline 1px;
+          text-decoration: underline 1px;
+}
+.body-start__title:nth-child(3) {
+  margin-bottom: 120px;
+  line-height: 60px;
+}
+
+.body-start__text {
+  margin-bottom: 120px;
+}
+
+.section__certificates {
+  padding-top: 100px;
+}
+
+.certificates__title {
+  font-family: "Arsenal";
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+
+.certificates__body {
+  padding: 34px 0 30px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 3px solid #926147;
+  border-bottom: 3px solid #926147;
+  border-radius: 5px;
+}
+
+.body-certificates__content {
+  max-width: 1020px;
+}
+
+.body-certificates__title {
+  font-family: "Arsenal";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 55px;
+  letter-spacing: 0.1em;
+  margin-top: 26px;
+  margin-bottom: 60px;
+}
+.body-certificates__title span {
+  color: #926147;
+  -webkit-text-decoration: underline 1px;
+          text-decoration: underline 1px;
+}
+
+.body-certificates__text {
+  margin-bottom: 60px;
+}
+
+.body-certificates__btn {
+  margin-bottom: 30px;
+}
+
+.bestsellers__title {
+  font-family: "Arsenal";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.bestsellers__items {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 60px;
+}
+
+.items-bestsellers__slider {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.item-bestsellers__img {
+  margin-bottom: 20px;
+}
+
+.item-bestsellers__title {
+  font-family: "Alef";
+  font-size: 36px;
+  line-height: 49px;
+  margin-bottom: 7px;
+  color: #000;
+}
+
+.item-bestsellers__price {
+  font-family: "Alef";
+  font-size: 36px;
+  line-height: 49px;
+  margin-bottom: 0;
+  border-bottom: #000 solid 4px;
+  border-radius: 5px;
+  max-width: 362px;
+}
+
+.section__catalog {
+  padding-top: 100px;
+}
+
+.catalog__container {
+  padding-top: 60px;
+}
+
+.catalog__title {
+  font-family: "Arsenal";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.catalog__items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px 25px;
+}
+
+.section__reviews {
+  padding-top: 84px;
+}
+
+.reviews__container {
+  position: relative;
+}
+
+.reviews__title {
+  font-family: "Arsenal";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+
+.reviews__items {
+  margin-top: 60px;
+  display: flex;
+  gap: 0 30px;
+  position: relative;
+  left: 0;
+  transition: 0.5s;
+}
+
+.items-reviews__slider {
+  position: absolute;
+  top: 200px;
+  right: 0;
+}
+
+.item-reviews__item {
+  position: relative;
+  border-top: 3px solid #926147;
+  border-bottom: 3px solid #926147;
+  border-radius: 150px 150px 150px 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 590px;
+  padding: 30px 30px 27px;
+  flex-shrink: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.item-reviews__title {
+  margin-bottom: 58px;
+}
+
+.item-reviews__text {
+  font-size: 24px;
+  line-height: 35px;
+  margin-bottom: 58px;
+}
+
+.item-reviews__stars {
+  display: flex;
+  gap: 0 60px;
+}
+
+.section__blog {
+  padding-top: 83px;
+}
+
+.blog__title {
+  font-family: "Arsenal";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.blog__items {
+  padding-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-blog__title {
+  margin-bottom: 10px;
+}
+
+.item-blog__link {
+  font-family: "Alef";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 49px;
+  letter-spacing: 0.05em;
+  color: #926147;
+}
+
+.section__footer {
+  background: #926147;
+  padding: 20px 0;
+  margin-top: 100px;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.start-footer__title {
+  font-family: "Arsenal";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  color: #FFFAF4;
+}
+
+.start-footer__socials {
+  display: flex;
+  gap: 0 30px;
+}
+
+.footer-start__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 5px 0;
+  padding-top: 60px;
+}
+
+.footer-start__subtitle {
+  font-family: "Arsenal";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 160%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+  color: #FFFAF4;
+}
+
+.footer-start__link {
+  display: flex;
+  gap: 0 22px;
+  font-family: "Arsenal";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFAF4;
+}
+.footer-start__link img {
+  width: 15px;
+  height: auto;
+}/*# sourceMappingURL=style.css.map */
